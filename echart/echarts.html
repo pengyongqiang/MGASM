@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+命中精度随训练种子数变化
+WD
+<script>
+  option = {
+  title: {
+    text: 'Weibo-Douban',
+    textStyle: {
+      fontSize: 25,
+      fontWeight: 'bold',
+      fontFamily: 'Times New Roman'
+    },
+    padding: 15
+  },
+  tooltip: {
+    trigger: 'axis'
+  },
+  legend: {
+    data: ['MGASM','MGASM_NL', 'MGASM_LDA', 'NSBVUIL','DeepDSA','JARUA','MAUIL','GradAlign+'],
+    textStyle: {
+      color: '#333',
+      fontSize: 20,
+      fontWeight: 'bold',
+      fontFamily: 'Times New Roman'
+    },
+    top: '8%',
+  },
+  grid: {
+    top: '20%',
+    left: '3%',
+    right: '4%',
+    bottom: '4%',
+    containLabel: true
+  },
+  toolbox: {
+    feature: {
+      saveAsImage: {}
+    }
+  },
+  xAxis: {
+    type: 'category',
+    boundaryGap: false,
+    data: ['0', '50','100', '150', '200', '250'],
+    axisLabel: {
+      fontSize: 30,
+      fontFamily: 'Times New Roman',
+      fontWeight: 'bold'
+    }
+  },
+  yAxis: {
+    type: 'value',
+    max: 0.8,
+    axisLabel: {
+      fontSize: 30,
+      fontFamily: 'Times New Roman',
+      fontWeight: 'bold'
+    }
+  },
+  series: [
+    {
+      name: 'MGASM',
+      type: 'line',
+      data: [0,0.602, 0.672, 0.678, 0.691, 0.684],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#2F4F4F',
+        borderWidth: 2,
+      },
+      symbol: 'circle',
+      symbolSize: 16
+    },
+    {
+      name: 'MGASM_NL',
+      type: 'line',
+      data: [0,0.482, 0.53, 0.542, 0.549, 0.538],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#8B4513',
+        borderWidth: 2,
+      },
+      symbol: 'rect',
+      symbolSize: 16
+    },
+    {
+      name: 'MGASM_LDA',
+      type: 'line',
+      data: [0,0.573, 0.65, 0.654, 0.66, 0.663],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#B22222',
+        borderWidth: 2,
+      },
+      symbol: 'diamond',
+      symbolSize: 16
+    },
+    {
+      name: 'NSBVUIL',
+      type: 'line',
+      data: [0, 0.168,0.232,0.255, 0.269, 0.291, 0.322],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#f56c6c',
+        borderWidth: 2,
+      },
+      symbol: 'triangle',
+      symbolSize: 16
+    },
+    {
+      name: 'DeepDSA',
+      type: 'line',
+      data: [0, 0.177,0.252,0.275, 0.299, 0.321, 0.341],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#3E7BB6',
+        borderColor: '#3E7BB6',
+        borderWidth: 2,
+      },
+      symbol: 'emptyDiamond',
+      symbolSize: 16
+    },
+    {
+      name: 'JARUA',
+      type: 'line',
+      data: [0,0.251,  0.343, 0.383, 0.421 ,0.441],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#0F9D58',
+        borderWidth: 2,
+      },
+      symbol: 'emptyDiamond',
+      symbolSize: 16
+    },
+    {
+      name: 'MAUIL',
+      type: 'line',
+      data: [0,0.211, 0.284, 0.332, 0.373, 0.401],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#4B0082',
+        borderWidth: 2,
+      },
+      symbol: 'roundRect',
+      symbolSize: 16
+    },
+    {
+      name: 'GradAlign+',
+      type: 'line',
+      data: [0,0.062, 0.102, 0.143, 0.162, 0.179],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#808000',
+        borderWidth: 2,
+      },
+      symbol: 'triangle',
+      symbolSize: 16
+    },
+
+  ]
+};
+</script>
+DBLPs
+<script>
+
+
+ option = {
+  title: {
+    text: 'DBLP17-DBLP19',
+    textStyle: {
+      fontSize: 25,
+      fontWeight: 'bold',
+      fontFamily: 'Times New Roman'
+    },
+    padding: 15
+  },
+  tooltip: {
+    trigger: 'axis'
+  },
+  legend: {
+    data: ['MGASM','MGASM_NL', 'MGASM_LDA', 'NSBVUIL','DeepDSA','JARUA','MAUIL','GradAlign+'],
+    textStyle: {
+      color: '#333',
+      fontSize: 20,
+      fontWeight: 'bold',
+      fontFamily: 'Times New Roman'
+    },
+    top: '8%',
+  },
+  grid: {
+    top: '20%',
+    left: '3%',
+    right: '4%',
+    bottom: '4%',
+    containLabel: true
+  },
+  toolbox: {
+    feature: {
+      saveAsImage: {}
+    }
+  },
+  xAxis: {
+    type: 'category',
+    boundaryGap: false,
+    data: ['0', '50','100', '150', '200', '250'],
+    axisLabel: {
+      fontSize: 30,
+      fontFamily: 'Times New Roman',
+      fontWeight: 'bold'
+    }
+  },
+  yAxis: {
+    type: 'value',
+    max: 0.8,
+    axisLabel: {
+      fontSize: 30,
+      fontFamily: 'Times New Roman',
+      fontWeight: 'bold'
+    }
+  },
+  series: [
+    {
+      name: 'MGASM',
+      type: 'line',
+      data: [0, 0.65, 0.69, 0.699, 0.701, 0.694],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+       itemStyle: {
+        color: '#2F4F4F',
+        borderWidth: 2,
+      },
+      symbol: 'circle',
+      symbolSize: 16
+    },
+    {
+      name: 'MGASM_NL',
+      type: 'line',
+      data: [0, 0.63, 0.671, 0.666, 0.666, 0.656],
+       lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#8B4513',
+        borderWidth: 2,
+      },
+      symbol: 'rect',
+      symbolSize: 16
+    },
+    {
+      name: 'MGASM_LDA',
+      type: 'line',
+      data: [0, 0.704, 0.748, 0.749, 0.752, 0.761],
+     lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#B22222',
+        borderWidth: 2,
+      },
+      symbol: 'diamond',
+      symbolSize: 16
+    },
+    {
+      name: 'NSBVUIL',
+      type: 'line',
+      data: [0, 0.279, 0.356, 0.413, 0.436, 0.449],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#f56c6c',
+        borderWidth: 2,
+      },
+      symbol: 'triangle',
+      symbolSize: 16
+    },
+    {
+      name: 'DeepDSA',
+      type: 'line',
+      data: [0, 0.334, 0.474, 0.501, 0.524, 0.554],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#3E7BB6',
+        borderColor: '#3E7BB6',
+        borderWidth: 2,
+      },
+      symbol: 'emptyDiamond',
+      symbolSize: 16
+    },
+    {
+      name: 'JARUA',
+      type: 'line',
+      data: [0, 0.475, 0.665, 0.725, 0.754, 0.764],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#0F9D58',
+        borderWidth: 2,
+      },
+      symbol: 'emptyDiamond',
+      symbolSize: 16
+    },
+    {
+      name: 'MAUIL',
+      type: 'line',
+      data: [0, 0.441, 0.556, 0.632, 0.702, 0.709],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#4B0082',
+        borderWidth: 2,
+      },
+      symbol: 'roundRect',
+      symbolSize: 16
+    },
+    {
+      name: 'GradAlign+',
+      type: 'line',
+      data: [0, 0.072, 0.112, 0.141, 0.165, 0.181],
+     lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#808000',
+        borderWidth: 2,
+      },
+      symbol: 'triangle',
+      symbolSize: 16
+    },
+  ]
+};
+
+</script>
+
+命中精度对比
+WD
+<script type="javascript">
+
+    app.config = {
+
+      align: 'middle',
+      verticalAlign: 'middle',
+      position: 'insideBottom',
+
+      onChange: function () {
+        const labelOption = {
+          rotate: app.config.rotate,
+          align: app.config.align,
+          verticalAlign: app.config.verticalAlign,
+          position: app.config.position,
+          distance: app.config.distance
+        };
+        myChart.setOption({
+          series: [
+            {
+              label: labelOption
+            },
+            {
+              label: labelOption
+            },
+            {
+              label: labelOption
+            },
+            {
+              label: labelOption
+            }
+          ]
+        });
+      }
+    };
+
+    const labelOption = {
+      show: true,
+      position: 'top',
+      distance: app.config.distance,
+      align: app.config.align,
+      verticalAlign: app.config.verticalAlign,
+      rotate: 0, // 将 rotate 设为 0
+      fontSize: 20,
+      rich: {
+        name: {
+          fontSize: 25
+        }
+      }
+    };
+
+    option = {
+      title: {
+        text: 'Weibo-Douban Hit-precision(k=3)',
+        textStyle: {
+          fontSize: 25,
+          fontWeight: 'bold',
+          fontFamily: 'Times New Roman'
+        },
+          padding: 15
+      },
+      toolbox: {
+        feature: {
+          saveAsImage: {
+            title: 'Save As Image'
+          }
+        }
+      },
+
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow'
+        }
+      },
+      legend: {
+        data: ['BC', 'AC'],
+        textStyle: {
+          fontSize: 30,
+          fontFamily: 'Times New Roman'
+        },
+        padding:15
+      },
+      xAxis: [
+        {
+          type: 'category',
+          axisTick: { show: false },
+          data: ['MGASM', 'MGASM_NL', 'MGASM_LDA'],
+          axisLabel: {
+            fontSize: 30,
+            fontFamily: 'Times New Roman'
+          }
+        }
+      ],
+      yAxis: [
+        {
+          type: 'value',
+          max: 1.0,
+          axisLabel: {
+            fontSize: 30,
+            fontFamily: 'Times New Roman'
+          },
+          splitLine: {
+            show: true,
+            lineStyle: {
+              type: 'dashed',
+              color: '#D1D1D1'
+            }
+          }
+        }
+      ],
+      series: [
+        {
+          name: 'BC',
+          type: 'bar',
+          barGap: 0,
+          barWidth: 55,
+          label: labelOption,
+          emphasis: {
+            focus: 'series'
+          },
+          data: [0.653,	0.523, 0.642]
+        },
+        {
+          name: 'AC',
+          type: 'bar',
+          barWidth: 55,
+          label: labelOption,
+          emphasis: {
+            focus: 'series'
+          },
+          data: [0.691,	0.549	,0.660]
+        }
+      ],
+      color: ['#6D9EEB', '#F69988', '#BAD98B'],
+      backgroundColor: '#F4F4F4',
+      grid: {
+        borderWidth: 1,
+        borderColor: '#D1D1D1',
+        top: '15%',
+      }
+    };
+</script>
+DBLPs
+<script type="javascript">
+
+    app.config = {
+
+      align: 'middle',
+      verticalAlign: 'middle',
+      position: 'insideBottom',
+
+      onChange: function () {
+        const labelOption = {
+          rotate: app.config.rotate,
+          align: app.config.align,
+          verticalAlign: app.config.verticalAlign,
+          position: app.config.position,
+          distance: app.config.distance
+        };
+        myChart.setOption({
+          series: [
+            {
+              label: labelOption
+            },
+            {
+              label: labelOption
+            },
+            {
+              label: labelOption
+            },
+            {
+              label: labelOption
+            }
+          ]
+        });
+      }
+    };
+
+    const labelOption = {
+      show: true,
+      position: 'top',
+      distance: app.config.distance,
+      align: app.config.align,
+      verticalAlign: app.config.verticalAlign,
+      rotate: 0, // 将 rotate 设为 0
+      fontSize: 20,
+      rich: {
+        name: {
+          fontSize: 25
+        }
+      }
+    };
+
+    option = {
+      title: {
+        text: 'DBLP17-DBLP19 Hit-precision(k=3)',
+        textStyle: {
+          fontSize: 25,
+          fontWeight: 'bold',
+          fontFamily: 'Times New Roman'
+        },
+          padding:15
+      },
+      toolbox: {
+        feature: {
+          saveAsImage: {
+            title: 'Save As Image'
+          }
+        }
+      },
+
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow'
+        }
+      },
+      legend: {
+        data: ['BC', 'AC'],
+        textStyle: {
+          fontSize: 30,
+          fontFamily: 'Times New Roman'
+        },
+          padding:15
+      },
+      xAxis: [
+        {
+          type: 'category',
+          axisTick: { show: false },
+          data: ['MGASM', 'MGASM_NL', 'MGASM_LDA'],
+          axisLabel: {
+            fontSize: 30,
+            fontFamily: 'Times New Roman'
+          }
+        }
+      ],
+      yAxis: [
+        {
+          type: 'value',
+          max: 1.0,
+          axisLabel: {
+            fontSize: 30,
+            fontFamily: 'Times New Roman'
+          },
+          splitLine: {
+            show: true,
+            lineStyle: {
+              type: 'dashed',
+              color: '#D1D1D1'
+            }
+          }
+        }
+      ],
+      series: [
+        {
+          name: 'BC',
+          type: 'bar',
+          barGap: 0,
+          barWidth: 55,
+          label: labelOption,
+          emphasis: {
+            focus: 'series'
+          },
+          data: [0.701,	0.666, 0.746]
+        },
+        {
+          name: 'AC',
+          type: 'bar',
+          barWidth: 55,
+          label: labelOption,
+          emphasis: {
+            focus: 'series'
+          },
+          data: [0.702,	0.667	,0.762]
+        }
+      ],
+      color: ['#6D9EEB', '#F69988', '#BAD98B'],
+      backgroundColor: '#F4F4F4',
+      grid: {
+        borderWidth: 1,
+        borderColor: '#D1D1D1',
+        top: '15%',
+      }
+    };
+</script>
+
+F1指标对比
+WD
+<script lang="javascript">
+
+    app.config = {
+
+      align: 'middle',
+      verticalAlign: 'middle',
+      position: 'insideBottom',
+
+      onChange: function () {
+        const labelOption = {
+          rotate: app.config.rotate,
+          align: app.config.align,
+          verticalAlign: app.config.verticalAlign,
+          position: app.config.position,
+          distance: app.config.distance
+        };
+        myChart.setOption({
+          series: [
+            {
+              label: labelOption
+            },
+            {
+              label: labelOption
+            },
+            {
+              label: labelOption
+            },
+            {
+              label: labelOption
+            }
+          ]
+        });
+      }
+    };
+
+    const labelOption = {
+      show: true,
+      position: 'top',
+      distance: app.config.distance,
+      align: app.config.align,
+      verticalAlign: app.config.verticalAlign,
+      rotate: 0, // 将 rotate 设为 0
+      fontSize: 20,
+      rich: {
+        name: {
+          fontSize: 25
+        }
+      }
+    };
+
+    option = {
+      title: {
+        text: 'DBLP17-DBLP19  F1-SCORE',
+        textStyle: {
+          fontSize: 25,
+          fontWeight: 'bold',
+          fontFamily: 'Times New Roman'
+        },
+        padding:15
+      },
+      toolbox: {
+        feature: {
+          saveAsImage: {
+            title: 'Save As Image'
+          }
+        }
+      },
+
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow'
+        }
+      },
+      legend: {
+        data: ['BC', 'AC'],
+        textStyle: {
+          fontSize: 30,
+          fontFamily: 'Times New Roman'
+        },
+        padding:15
+      },
+      xAxis: [
+        {
+          type: 'category',
+          axisTick: { show: false },
+          data: ['MGASM', 'MGASM_NL', 'MGASM_LDA'],
+          axisLabel: {
+            fontSize: 30,
+            fontFamily: 'Times New Roman'
+          }
+        }
+      ],
+      yAxis: [
+        {
+          type: 'value',
+          max: 100,
+          axisLabel: {
+            fontSize: 30,
+            fontFamily: 'Times New Roman'
+          },
+          splitLine: {
+            show: true,
+            lineStyle: {
+              type: 'dashed',
+              color: '#D1D1D1'
+            }
+          }
+        }
+      ],
+      series: [
+        {
+          name: 'BC',
+          type: 'bar',
+          barGap: 0,
+          barWidth: 55,
+          label: labelOption,
+          emphasis: {
+            focus: 'series'
+          },
+          data: [81.14,78.19, 85.42]
+        },
+        {
+          name: 'AC',
+          type: 'bar',
+          barWidth: 55,
+          label: labelOption,
+          emphasis: {
+            focus: 'series'
+          },
+          data: [81.38, 78.65	,86.46]
+        }
+      ],
+      color: ['#6D9EEB', '#F69988', '#BAD98B'],
+      backgroundColor: '#F4F4F4',
+      grid: {
+        borderWidth: 1,
+        borderColor: '#D1D1D1',
+        top: '15%',
+      }
+    };
+</script>
+DBLPs
+<script lang="javascript">
+
+    app.config = {
+
+      align: 'middle',
+      verticalAlign: 'middle',
+      position: 'insideBottom',
+
+      onChange: function () {
+        const labelOption = {
+          rotate: app.config.rotate,
+          align: app.config.align,
+          verticalAlign: app.config.verticalAlign,
+          position: app.config.position,
+          distance: app.config.distance
+        };
+        myChart.setOption({
+          series: [
+            {
+              label: labelOption
+            },
+            {
+              label: labelOption
+            },
+            {
+              label: labelOption
+            },
+            {
+              label: labelOption
+            }
+          ]
+        });
+      }
+    };
+
+    const labelOption = {
+      show: true,
+      position: 'top',
+      distance: app.config.distance,
+      align: app.config.align,
+      verticalAlign: app.config.verticalAlign,
+      rotate: 0, // 将 rotate 设为 0
+      fontSize: 20,
+      rich: {
+        name: {
+          fontSize: 25
+        }
+      }
+    };
+
+    option = {
+      title: {
+        text: 'Weibo-Douban F1-SCORE',
+        textStyle: {
+          fontSize: 25,
+          fontWeight: 'bold',
+          fontFamily: 'Times New Roman'
+        },
+        padding:15
+      },
+      toolbox: {
+        feature: {
+          saveAsImage: {
+            title: 'Save As Image'
+          }
+        }
+      },
+
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow'
+        }
+      },
+      legend: {
+        data: ['BC', 'AC'],
+        textStyle: {
+          fontSize: 30,
+          fontFamily: 'Times New Roman'
+        },
+        padding:15
+      },
+      xAxis: [
+        {
+          type: 'category',
+          axisTick: { show: false },
+          data: ['MGASM', 'MGASM_NL', 'MGASM_LDA'],
+          axisLabel: {
+            fontSize: 30,
+            fontFamily: 'Times New Roman'
+          }
+        }
+      ],
+      yAxis: [
+        {
+          type: 'value',
+          max: 100,
+          axisLabel: {
+            fontSize: 30,
+            fontFamily: 'Times New Roman'
+          },
+          splitLine: {
+            show: true,
+            lineStyle: {
+              type: 'dashed',
+              color: '#D1D1D1'
+            }
+          }
+        }
+      ],
+      series: [
+        {
+          name: 'BC',
+          type: 'bar',
+          barGap: 0,
+          barWidth: 55,
+          label: labelOption,
+          emphasis: {
+            focus: 'series'
+          },
+          data: [73.89,59.33, 73.93]
+        },
+        {
+          name: 'AC',
+          type: 'bar',
+          barWidth: 55,
+          label: labelOption,
+          emphasis: {
+            focus: 'series'
+          },
+          data: [75.16,62.44	,74.07]
+        }
+      ],
+      color: ['#6D9EEB', '#F69988', '#BAD98B'],
+      backgroundColor: '#F4F4F4',
+      grid: {
+        borderWidth: 1,
+        borderColor: '#D1D1D1',
+        top: '15%',
+      }
+    };
+</script>
+
+命中精度随维度变化
+WD
+<script>
+   option = {
+  title: {
+    text: 'Weibo-Douban',
+    textStyle: {
+      fontSize: 40,
+      fontWeight: 'bold',
+      fontFamily: 'Times New Roman'
+    },
+    padding: 15
+  },
+  tooltip: {
+    trigger: 'axis'
+  },
+  legend: {
+    data: ['K=1', 'K=3', 'K=5'],
+    textStyle: {
+      color: '#333',
+      fontSize: 40,
+      fontFamily: 'Times New Roman'
+    },
+    top: '8%',
+  },
+  grid: {
+    top: '20%',
+    left: '3%',
+    right: '4%',
+    bottom: '8%',  // Adjusted bottom to be similar to the first chart
+    containLabel: true
+  },
+  toolbox: {
+    feature: {
+      saveAsImage: {}
+    }
+  },
+  xAxis: {
+    type: 'category',
+    boundaryGap: false,
+    data: ['50', '100', '150', '200'],
+    axisLabel: {
+      fontSize: 30,
+      fontFamily: 'Times New Roman'
+    }
+  },
+  yAxis: {
+    type: 'value',
+    max: 1.0,
+    axisLabel: {
+      fontSize: 30,
+      fontFamily: 'Times New Roman'
+    }
+  },
+  series: [
+    {
+      name: 'K=1',
+      type: 'line',
+      data: [0.603, 0.61, 0.638, 0.634],
+      lineStyle: {
+        width: 3,  // Adjusted line width to be similar to the first chart
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#2F4F4F'  // Use a color similar to the first chart
+      },
+      symbol: 'circle',
+      symbolSize: 16
+    },
+    {
+      name: 'K=3',
+      type: 'line',
+      data: [0.658, 0.672, 0.694, 0.688],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#4682B4'  // Use a color similar to the first chart
+      },
+      symbol: 'rect',
+      symbolSize: 16
+    },
+    {
+      name: 'K=5',
+      type: 'line',
+      data: [0.692, 0.707, 0.727, 0.721],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#8B4513'  // Use a color similar to the first chart
+      },
+      symbol: 'triangle',
+      symbolSize: 16
+    },
+  ],
+  graphic: [
+    {
+      type: 'text',
+      left: 'center',
+      bottom: 15,
+      z: 100,
+      style: {
+        text: 'Feature dimension D',
+        fontSize: 35,
+        fontFamily: 'Times New Roman'
+      }
+    }
+  ]
+};
+
+</script>
+DBLPs
+<script>
+ option = {
+  title: {
+    text: 'DBLP17-DBLP19',
+    textStyle: {
+      fontSize: 40,
+      fontWeight: 'bold',
+      fontFamily: 'Times New Roman'
+    },
+    padding: 15
+  },
+  tooltip: {
+    trigger: 'axis'
+  },
+  legend: {
+    data: ['K=1', 'K=3', 'K=5'],
+    textStyle: {
+      color: '#333',
+      fontSize: 40,
+      fontFamily: 'Times New Roman'
+    },
+    top: '8%',
+  },
+  grid: {
+    top: '20%',
+    left: '3%',
+    right: '4%',
+    bottom: '8%',  // Adjusted bottom to be similar to the first chart
+    containLabel: true
+  },
+  toolbox: {
+    feature: {
+      saveAsImage: {}
+    }
+  },
+  xAxis: {
+    type: 'category',
+    boundaryGap: false,
+    data: ['50', '100', '150', '200'],
+    axisLabel: {
+      fontSize: 30,
+      fontFamily: 'Times New Roman'
+    }
+  },
+  yAxis: {
+    type: 'value',
+    max: 0.8,  // Adjusted max value
+    axisLabel: {
+      fontSize: 30,
+      fontFamily: 'Times New Roman'
+    }
+  },
+  series: [
+    {
+      name: 'K=1',
+      type: 'line',
+      data: [0.657, 0.674, 0.691, 0.665],
+      lineStyle: {
+        width: 3,  // Adjusted line width to be similar to the first chart
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#2F4F4F'  // Use a color similar to the first chart
+      },
+      symbol: 'circle',
+      symbolSize: 16
+    },
+    {
+      name: 'K=3',
+      type: 'line',
+      data: [0.676, 0.69, 0.704, 0.677],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#4682B4'  // Use a color similar to the first chart
+      },
+      symbol: 'rect',
+      symbolSize: 16
+    },
+    {
+      name: 'K=5',
+      type: 'line',
+      data: [0.686, 0.699, 0.711, 0.683],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#8B4513'  // Use a color similar to the first chart
+      },
+      symbol: 'triangle',
+      symbolSize: 16
+    },
+  ],
+  graphic: [
+    {
+      type: 'text',
+      left: 'center',
+      bottom: 15,
+      z: 100,
+      style: {
+        text: 'Feature dimension D',
+        fontSize: 35,
+        fontFamily: 'Times New Roman'
+      }
+    }
+  ]
+};
+
+</script>
+
+
+PRF随维度变化
+WD
+<script>
+    option = {
+  title: {
+    text: 'Weibo-Douban',
+    textStyle: {
+      fontSize: 40,
+      fontWeight: 'bold',
+      fontFamily: 'Times New Roman'
+    },
+    padding: 15
+  },
+  tooltip: {
+    trigger: 'axis'
+  },
+  legend: {
+    data: ['Pre.', 'Rec.', 'F1'],
+    textStyle: {
+      color: '#333',
+      fontSize: 40,
+      fontFamily: 'Times New Roman'
+    },
+    top: '8%',
+  },
+  grid: {
+    top: '20%',
+    left: '3%',
+    right: '4%',
+    bottom: '8%',  // Adjusted bottom to be similar to the first chart
+    containLabel: true
+  },
+  toolbox: {
+    feature: {
+      saveAsImage: {}
+    }
+  },
+  xAxis: {
+    type: 'category',
+    boundaryGap: false,
+    data: ['50', '100', '150', '200'],
+    axisLabel: {
+      fontSize: 30,
+      fontFamily: 'Times New Roman'
+    }
+  },
+  yAxis: {
+    type: 'value',
+    max: 1.0,
+    axisLabel: {
+      fontSize: 30,
+      fontFamily: 'Times New Roman'
+    },
+    max: 1
+  },
+  series: [
+    {
+      name: 'Pre.',
+      type: 'line',
+      data: [0.999, 0.999, 0.999, 0.998],
+      lineStyle: {
+        width: 3,  // Adjusted line width to be similar to the first chart
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#2F4F4F'  // Use a color similar to the first chart
+      },
+      symbol: 'circle',
+      symbolSize: 16
+    },
+    {
+      name: 'Rec.',
+      type: 'line',
+      data: [0.586, 0.58, 0.594, 0.59],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#4682B4'  // Use a color similar to the first chart
+      },
+      symbol: 'rect',
+      symbolSize: 16
+    },
+    {
+      name: 'F1',
+      type: 'line',
+      data: [0.737, 0.732, 0.744, 0.741],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#8B4513'  // Use a color similar to the first chart
+      },
+      symbol: 'triangle',
+      symbolSize: 16
+    },
+  ],
+  graphic: [
+    {
+      type: 'text',
+      left: 'center',
+      bottom: 15,
+      z: 100,
+      style: {
+        text: 'Feature dimension D',
+        fontSize: 35,
+        fontFamily: 'Times New Roman'
+      }
+    }
+  ]
+};
+</script>
+DBLPs
+<script>
+option = {
+  title: {
+    text: 'DBLP17-DBLP19',
+    textStyle: {
+      fontSize: 40,
+      fontWeight: 'bold',
+      fontFamily: 'Times New Roman'
+    },
+    padding: 15
+  },
+  tooltip: {
+    trigger: 'axis'
+  },
+  legend: {
+    data: ['Pre.', 'Rec.', 'F1'],
+    textStyle: {
+      color: '#333',
+      fontSize: 40,
+      fontFamily: 'Times New Roman'
+    },
+    top: '8%',
+  },
+  grid: {
+    top: '20%',
+    left: '3%',
+    right: '4%',
+    bottom: '8%',  // Adjusted bottom to be similar to the first chart
+    containLabel: true
+  },
+  toolbox: {
+    feature: {
+      saveAsImage: {}
+    }
+  },
+  xAxis: {
+    type: 'category',
+    boundaryGap: false,
+    data: ['50', '100', '150', '200'],
+    axisLabel: {
+      fontSize: 30,
+      fontFamily: 'Times New Roman'
+    }
+  },
+  yAxis: {
+    type: 'value',
+    max: 1.0,
+    axisLabel: {
+      fontSize: 30,
+      fontFamily: 'Times New Roman'
+    },
+    max: 1
+  },
+  series: [
+    {
+      name: 'Pre.',
+      type: 'line',
+      data: [0.998, 0.999, 0.999, 0.999],
+      lineStyle: {
+        width: 3,  // Adjusted line width to be similar to the first chart
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#2F4F4F'  // Use a color similar to the first chart
+      },
+      symbol: 'circle',
+      symbolSize: 16
+    },
+    {
+      name: 'Rec.',
+      type: 'line',
+      data: [0.655, 0.678, 0.682, 0.683],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#4682B4'  // Use a color similar to the first chart
+      },
+      symbol: 'rect',
+      symbolSize: 16
+    },
+    {
+      name: 'F1',
+      type: 'line',
+      data: [0.791, 0.807, 0.81, 0.811],
+      lineStyle: {
+        width: 3,
+        type: 'solid'
+      },
+      itemStyle: {
+        color: '#8B4513'  // Use a color similar to the first chart
+      },
+      symbol: 'triangle',
+      symbolSize: 16
+    },
+  ],
+  graphic: [
+    {
+      type: 'text',
+      left: 'center',
+      bottom: 15,
+      z: 100,
+      style: {
+        text: 'Feature dimension D',
+        fontSize: 35,
+        fontFamily: 'Times New Roman'
+      }
+    }
+  ]
+};
+
+</script>
