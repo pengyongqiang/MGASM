@@ -29,7 +29,7 @@ For the WD dataset, a Chinese Wikipedia corpus is needed to train the word vecto
 
 [//]: # (```)
 
-wating...)
+
 
 [//]: # (```)
 
