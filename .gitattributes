@@ -1,0 +1,3 @@
+zhwiki-latest-pages-articles.xml.bz2 filter=lfs diff=lfs merge=lfs -text
+zhwiki_corpus filter=lfs diff=lfs merge=lfs -text
+models/pmodels/electra/pytorch_model.bin filter=lfs diff=lfs merge=lfs -text
